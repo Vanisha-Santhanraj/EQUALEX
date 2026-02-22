@@ -62,8 +62,8 @@
 nav{
     width:95%;
     height: 100px;
-    /* background-color: rgb(0, 0, 0); */
-    background-color: rgba(255, 255, 255, 0.142);
+    background-color: rgb(0, 0, 0);
+    /* background-color: rgba(255, 255, 255, 0.142); */
     backdrop-filter: blur(5px);
     border-radius: 10px;
     z-index: 4;
@@ -73,6 +73,15 @@ nav{
     justify-content: space-around;
     align-items: center;
     transition: all 0.3s ease-in-out;
+}
+
+nav:hover{
+    box-shadow:
+    0 0 5px rgba(255,215,0,0.6),
+    0 0 10px rgba(255,215,0,0.5),
+    0 0 15px rgba(255,215,0,0.3),
+    inset 0 0 10px rgba(255,215,0,0.1);
+    
 }
 
 nav .logo{
@@ -88,6 +97,7 @@ nav a{
     position: relative;
     scroll-behavior: smooth;
 }
+
 
 nav a::after{
     content:'';
@@ -177,10 +187,6 @@ button:hover{
     box-shadow: 0 10px 20px rgba(185, 180, 180, 0.2);
 }
 
-@media only screen and (min-width:300px) and (max-width:600px){
-   
-}
-
 /* BOX 2 */
 /* 
 .two{
@@ -197,6 +203,7 @@ section{
     justify-content: center;
     align-items: center;
     gap:40px;
+
 }
 
 h1{
@@ -213,10 +220,11 @@ section .card{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    /* align-items: center; */
+    align-items: center;
     gap:10px;
     margin-top: 40px;
     padding:10px;
+    transition: transform 0.3s ease , box-shadow 0.3s ease;
 }
 
 .card .txt{
@@ -238,6 +246,7 @@ section .card{
     border-radius: 10px;
 }
 
+
 .card:hover{
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(216, 213, 213, 0.2);
@@ -257,6 +266,13 @@ section .card{
     justify-content: center;
     gap:10px;
     padding:5px;
+    transition: transform 0.2s ease, opacity 0.2ss ease;
+}
+
+
+.card:hover .links{
+    opacity:1;
+    transform: translateY(-2px);
 }
 
 .i-1{
@@ -317,7 +333,7 @@ section .card{
 }
 
 .petti img{
-    width:200px;
+    width:100%;
     height:250px;
     border-radius: 5px;
 }
@@ -333,7 +349,7 @@ section .card{
     padding:10px 20px;
     /* border: 2px solid white; */
     background-color: goldenrod;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     /* color:aliceblue; */
     text-align: center;
     letter-spacing: 10px;
@@ -403,4 +419,198 @@ footer .icons{
     line-height: 30px;
     letter-spacing: 5px;
     padding:10px;
+}
+
+/* ================= MOBILE ================= */
+@media only screen and (max-width:600px){
+    .one .bg{
+      width:100%;
+      height:800px;
+    }
+
+    nav{
+        width:90%;
+        flex-direction: row;
+        height:80px;
+        padding:10px;
+        gap:15px;
+        justify-content: space-between;
+        background-color: rgb(0, 0, 0);
+    }
+
+    nav .logo{
+        height:150px;
+        width:80px;
+    }
+
+    nav a{
+        font-size:16px;
+        display: none;
+    }
+
+    .bar{
+        color:aliceblue;
+        font-size: 25px;
+        display: block;
+    }
+
+    .legal{
+        text-align: center;
+    }
+
+    .text{
+        width:90%;
+        left:20px;
+        top:260px;
+        text-align:center;
+    }
+
+    .text h1{
+        font-size:45px;
+        letter-spacing:5px;
+    }
+
+    .text h3{
+        font-size:18px;
+    }
+
+    section{
+        flex-direction: column;
+        gap:20px;
+    }
+
+    .card{
+        width:90%;
+        height:auto;
+    }
+
+    .boxes{
+        flex-direction: column;
+        height:auto;
+        align-items:center;
+    }
+
+    .petti{
+        width:100%;
+        height:auto;
+    }
+
+    footer{
+        flex-direction: column;
+        /* gap:20px; */
+        justify-content: space-between;
+        text-align:center;
+        border-bottom: 1px solid black;
+        
+    }
+
+    .foot img{
+        width:150px;
+        height:200px;
+    }
+
+    .foot,.address,.numbers{
+        align-items:center;
+    }
+
+    .con{
+        letter-spacing: 0px;
+        font-size: 10px;
+    }
+    #contact{
+        height:auto;
+        padding-bottom:30px;
+    }
+
+    .end{
+        letter-spacing: 3px;
+        padding-top:40px;
+    }
+}
+
+/* ================= TABLET ================= */
+@media only screen and (min-width:601px) and (max-width:1024px){
+
+    nav{
+        height:90px;
+    }
+
+    nav .logo{
+        height:160px;
+    }
+
+    nav a{
+        font-size:18px;
+    }
+
+    .text{
+        width:70%;
+        left:-50px;
+        top:220px;
+    }
+
+    .text h1{
+        font-size:70px;
+    }
+
+    section{
+        flex-wrap: wrap;
+        gap:30px;
+    }
+
+    .card{
+        width:45%;
+        height:auto;
+    }
+
+    .boxes{
+        flex-wrap: wrap;
+        justify-content:center;
+        height:auto;
+    }
+
+    .petti{
+        width:45%;
+        height:auto;
+    }
+
+    footer{
+        /* flex-wrap: wrap; */
+        gap:30px;
+        padding:10px;
+        justify-content: space-between;
+    }
+     .icons #one{
+        font-size:35px;
+    }
+
+    #contact{
+        height:auto;
+        padding-bottom:40px;
+    }
+
+    .con h2{
+        letter-spacing: 5px;
+    }
+}
+
+/* ================= LAPTOP / DESKTOP ================= */
+@media only screen and (min-width:1025px){
+
+    .text{
+        width:500px;
+    }
+
+    .text h1{
+        font-size:100px;
+    }
+
+    section{
+        flex-direction: row;
+    }
+
+    .boxes{
+        flex-direction: row;
+    }
+
 }
