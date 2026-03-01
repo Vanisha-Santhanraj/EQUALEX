@@ -9,15 +9,20 @@
 <body>
     <div class="container">
     <!-- FIRST BOX   -->
-      <div class="box one">
+
+      <div class="box one" id="home">
         <img src="./Assets/Fixed.png" class="bg"/>
+
        <nav>
-        <img src="./Assets/Logo.png" alt="law" class="logo"/>
-        <a href>Home</a>
+        <img src="./Assets/logo.png" alt="law" class="logo"/>
+        <!-- <i class="fa-solid fa-circle-xmark wrong" onclick="firm('close')"></i> -->
+        <a href="#home">Home</a>
         <a href="#about">About Us</a>
         <a href="#service">Services</a>
         <a href="#contact">Contact</a>
         <a href="#enquiry">Enquiry</a>
+        <!-- <a href="#bar"><i class="fa-solid fa-bars " onclick="firm('open')"></i></a> -->
+        <h4>EQUALEX LAW ASSOCIATES</h4>
        </nav>
 
        <div class="text">
@@ -47,9 +52,9 @@
           <h5>Madras High Court</h5>
           </div>
           <div class="links">
-           <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp i-1"></i></a>-
-           <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram i-2"></i></a>-
-           <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin i-3"></i></a>
+           <a href="https://wa.me/+91 8608264783"><i class="fa-brands fa-whatsapp i-1"></i></a>-
+           <a href="https://www.instagram.com/i_pleader?igsh=b3QzYmY4MjNvcjU="><i class="fa-brands fa-instagram i-2"></i></a>
+           <!-- <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin i-3"></i></a> -->
           </div>
         </div>
 
@@ -62,9 +67,9 @@
           <h5>Madras High Court</h5>
           </div>
           <div class="links">
-           <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp i-1"></i></a>-
-           <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram i-2"></i></a>-
-           <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin i-3"></i></a>
+           <a href="https://wa.me/+91 7299980361"><i class="fa-brands fa-whatsapp i-1"></i></a>-
+           <a href="https://www.instagram.com/__hemanth__21_?igsh=YnBxMWp1ZHphYXR0"><i class="fa-brands fa-instagram i-2"></i></a>
+           <!-- <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin i-3"></i></a> -->
           </div>
         </div>
 
@@ -72,14 +77,14 @@
           <img src="./Assets/Ranjith-bg.png"/>
           <div class="txt">
           <h2>P.Ranjith</h2>
-          <h6>B.A.LL.B</h6>
+          <h6>B.com.B.A.LL.B</h6>
           <h4>Advocate & Legal Consultant</h4>
           <h5>Madras High Court</h5>
           </div>
            <div class="links">
-           <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp i-1"></i></a>-
-           <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram i-2"></i></a>-
-           <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin i-3"></i></a>
+           <a href="https://wa.me/+91 7601966696/"><i class="fa-brands fa-whatsapp i-1"></i></a>-
+           <a href="https://www.instagram.com/adv_ranjithkumar?igsh=MXR1czRnd3VxMmo4ZA=="><i class="fa-brands fa-instagram i-2"></i></a>
+           <!-- <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin i-3"></i></a> -->
           </div>
         </div>
       </section>
@@ -87,13 +92,13 @@
 
   <!-- THIRD BOX -->
     <div class="box three" id="service">
-    <h1>Our Services</h1>
+    <h1>OUR SERVICES</h1>
     <div class="legal">
     <h2>We Are Providing Free Legal Consulting & Legal Advices</h2>
     </div>
     <div class="boxes">
      <div class="first petti">
-      <img src="./Assets/Image 1.avif"/>
+      <img src="./Assets/Court Rep.jpg">
       <h3>Court Representation</h3>
       <h4>Arguing cases, filing petitions, bail applications,Filing appeals and handling litigation in various courts.</h4>
      </div>
@@ -105,13 +110,14 @@
      </div>
 
      <div class="third petti">
-      <img src="./Assets/image 3.avif"/>
-      <h3>Drafting Documents</h3>
-      <h4>Preparing contracts, MoUs, deeds, and legal notices.Structuring rights, duties, and remedies clearly.</h4>
+      <img src="./Assets/Reg.webp"/>
+      <h3>Document Registrations</h3>
+      <h4>Its the legal process of recording a document with a gov authority.
+         It gives legal validity and creates a permanent public record.</h4>
      </div>
 
      <div class="fourth petti">
-      <img src="./Assets/image 4.avif"/>
+      <img src="./Assets/Client.webp"/>
       <h3>Client Representation</h3>
       <h4>Acting in the best interest of the client, regardless of personal opinion regarding guilt.No misleading statements.</h4>
      </div>
@@ -124,16 +130,38 @@
      
     </div>
     <div class="con">
-     <h2>Contact Us For Legal Consultations</h2>
+     <h2>CONTACT US FOR LEGAL CONSULTATIONS</h2>
     </div>
     </div>
 
    <!-- FOURTH BOX -->
+    
+
+    <div class="box five" id="enquiry">
+      <h1>ENQUIRE HERE</h1>
+    <div class="enquiry">
+     <h2>Send Your Legal Enquiry</h2>
+
+     <form id="enquiry-form">
+     <input type="text" name="name" placeholder="Your Name" required>
+     <input type="number" name="email" placeholder="Your Mobile Number" required>
+     <input type="text" name="subject" placeholder="Subject" required>
+     <textarea name="message" placeholder="Your Message" required></textarea>
+     <button type="submit" id="eq">Send Enquiry</button>
+     </form>
+
+     <p id="status"></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    </div>
+    <!-- FIFTH BOX -->
+
     <div class="fourth" id="contact">
-    <h1>Contact Us</h1>
+    <h1>CONTACT US</h1>
     <footer>
      <div class="foot">
-      <img src="./Assets/Logo.png"/>
+      <img src="./Assets/logo.png" class="logo"/>
       <!-- <h4>Our firm is led by experienced advocates committed to delivering practical, effective, and ethical legal solutions. Each member of our team brings strong courtroom experience, detailed legal research skills, and a client-first approach.</h4> -->
      </div>
 
@@ -144,25 +172,25 @@
      </div>
 
      <div class="numbers">
-      <h3>Santhosh.R-<span>8608264783</span></h3>
-      <h3>Hemakumar.S-<span>8608264783</span></h3>
-      <h3>Ranjith.P-<span>7601966696</span></h3>
+      <h3>Contact:</h3>
+      <h4>Ranjith.P <span>7601966696</span></h4>
+      <h4>Santhosh.R <span>8608264783</span></h4>
+      <h4>Hemakumar.S <span>7299980361</span></h4>
+      
      </div>
 
      <div class="icons">
-      <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp i-1" id="one"></i></a>-
+      <!-- <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp i-1" id="one"></i></a>-
       <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram i-2" id="one"></i></a>-
-      <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin i-3" id="one"></i></a>
-     </div>
+      <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin i-3" id="one"></i></a> -->
+     <h3>EQUALEX LAW ASSOCIATES</h3>
+    </div>
     </footer>
     <div class="end">
      <h4>Terms & Conditions Applied</h4>
-     <h5>Copyrigths @ 2026 EQUALex all reserved</h5>
+     <h5>Copyrights@2026 EQUALEX all reserved</h5>
     </div>
     </div>
-
-    <!-- <div class="box five" id="enquiry">
-
-    </div> -->
+  <script src="./index.js"></script>
 </body>
 </html>
